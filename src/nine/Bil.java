@@ -15,7 +15,7 @@ public class Bil {
 
     public void tilkobTrailer() {
         //calc weight if trailer is added
-        int samletWeight = this.weight + (trailer != null ? trailer.getWeight() : 0);
+        int samletWeight = this.weight + trailer.getWeight();
 
         if(samletWeight <= 3500) {
             this.trailer = trailer;
@@ -25,6 +25,6 @@ public class Bil {
     }
 
     public int getTotalWeight() {
-        return this.weight + (this.trailer != null ? this.trailer.getWeight(): 0);
+        return this.weight + trailer.getWeight();
     }
 }
